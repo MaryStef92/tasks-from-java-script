@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>task 63</title>
+    <style>
+        button{
+            font-size: 20px;
+            padding: 10px;
+            font-style: oblique;
+            font-weight: bold;
+        }
+        h2{
+            font-style: oblique;  
+        }
+    </style>
+</head>
+<body>
+    <h2>Title 1</h2> 
+    <h2>Title 2</h2>
+    <h2>Titel 3</h2>
+    <button  type="button" onclick="myFunction()">Click it!</button>   
+
+    <script>
+        let counter = 0;
+        let colors = ["red", "green", "purple", "blue"];
+        function myFunction () {
+            let elements = document.getElementsByTagName('h2');
+            for (i=0; i < elements.length; i++ ) {
+                elements[i].style.color = colors[counter % colors.length];
+                elements[i].style.border = "solid 2px black";
+                elements[i].style.width = "300px";
+                elements[i].style.fontSize = "25px";
+                elements[i].style.textAlign = "center";
+                elements[i].style.backgroundColor = "lightblue";
+                elements[i].innerHTML="GOT IT!";
+            }
+            counter++;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 68</title>
+    <style>
+        body{
+            width: (80%);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Volume of cylinder</h1>
+    Please enter the height of the cylinder: <input type="text" id="height">
+    <br>
+    Please enter the radius of the cylinder: <input type="text" id="radius">
+    <br><br>
+    <button type="button" onclick="calculateVolume()">Get Volume</button>
+    <div id="outputDiv"></div>
+
+
+
+
+    <script>
+
+       function calculateVolume() {
+        let height = parseFloat(document.getElementById("height").value);
+        let radius = parseFloat(document.getElementById("radius").value);
+
+        let volume = Math.PI * radius**2 * height;
+
+        document.getElementById("outputDiv").innerHTML = volume;
+  
+}
+
+
+
+
+    </script>
+</body>
+</html>

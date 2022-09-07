@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 58</title>
+</head>
+<body>
+    <p id="getNew">Hello World!</p>
+    <button type="button" onclick= "getDay()">Click here</button>
+    <button type="button" onclick= "newColor()">Click here</button>
+
+    <script>
+         const days = ["Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+         function getDay() {
+         const d = new Date();
+         let day = days [d.getDay()];
+         document.getElementById("getNew").innerHTML = day;
+        }
+        function newColor() {
+            document.getElementById("getNew").style.color = "green";
+            document.getElementById("getNew").style.border = "solid 2px black";
+            document.getElementById("getNew").style.width = "350px";
+
+
+        }
+    </script>
+</body>
+</html>

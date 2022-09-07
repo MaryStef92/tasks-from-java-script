@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>task 56</title>
+  </head>
+<body>
+  <h3>TRY TO WRITE SOME WORD</h3>
+
+<input id="someText" value="" />
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="text"></p>
+
+<script>
+  
+function myFunction() {
+  var someWord;
+ var someText = document.getElementById("someText").value;
+ 
+
+  if (someText.length < 5 ) {
+    someWord = "This is a tiny string" ;
+  }
+  else if(someText.length >= 5 && someText.length < 10){
+    someWord = "This is a short string";
+  }
+  else if(someText.length >= 10 && someText.length < 15){
+    someWord = "This is an average string";
+  }
+  else if(someText.length >= 15 && someText.length <=30){
+    someWord = "This is a large string";
+  }else {
+    someWord = "This is a gigantic string";
+  }
+  document.getElementById("text").innerHTML = someWord;
+}
+</script>
+
+</body>
+</html>
